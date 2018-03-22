@@ -37,4 +37,4 @@ It will create 2 policies and attach it to its respective ldap group
 ## Run utility
 
 * cd [to git or svn repo directory]
-* python python config_vault.py
+* python config_vault.py
