@@ -2,7 +2,7 @@
 
 ## Description
 
-Hashicorp has an api to configure vault but the configuration is not fully json compatible. This util will attempt to make it easier to configuration and maintain. This utility come out of the frustrations of poor documentation and lack valid examples from Hashicorp.
+Hashicorp has an api to configure vault but the configuration can only pass a key/value pair. This util will attempt to make it easier to configuration and maintain.
 
 ## References
 * https://www.hashicorp.com/blog/codifying-vault-policies-and-configuration
@@ -33,6 +33,11 @@ Current configuration assumes that you have 2 ldap groups
 * system_admins_ro
 
 It will create 2 policies and attach it to its respective ldap group
+
+approle dictionary defines an application role. It will
+* create a policy named 'app' with the secret paths defined
+* create approle 'app' and attach to policy 'app'
+
 
 ## Run utility
 

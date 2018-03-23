@@ -71,3 +71,19 @@ config = [
   },
   
 ]
+
+approle = [
+
+  {
+    "app": {
+      "path": [ "secret/prod/app/*", "secret/prod/app_alt/*" ]
+    }
+  },
+  {
+    "app_dev": {
+      "path": [ "secret/dev/app/*" ]
+    }
+  }
+
+]
+
