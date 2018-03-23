@@ -64,12 +64,12 @@ for current_approle in data.approle:
 
         print "-" * 50
         print "\nrole: %s" % secret_pathk
-        approle_policy_dict = {'policy': {'path' : {}}}
+        approle_policy_dict = {}
 
         approle_policy_url = "%s%s" % (confidential.vault_addr, '/v1/sys/policies/acl/' + secret_pathk)
         print "path: %s" % approle_policy_url
         for current_secret_path in secret_pathv['path']:
-            approle_policy_dict = {"capabilities": ["read", "list"]}
+            approle_policy_dict[current_secret_path] = {"capabilities": ["read", "list"]}
 
         path_config_dict = json.dumps(get_policy_hash(approle_policy_dict))
 
