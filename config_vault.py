@@ -39,7 +39,7 @@ print 'general configuration'
 print "=" * 50
 
 if json.loads(response.text)['sealed'] == 'true':
-    print "vault at %s is sealed, please unseal to configure" % vault_addr
+    print "vault at %s is sealed, please unseal to configure" % confidential.vault_addr
     sys.exit(1)
 
 for current_path in data.config:
